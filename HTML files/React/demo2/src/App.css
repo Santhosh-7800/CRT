@@ -1,0 +1,29 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.details {
+    padding: 0% 1rem;
+    background-color: brown;
+    color: lightblue;
+    border-radius: 5px;
+    width: 97%;
+    margin: 0.5rem 0;
+    display: inline-block;
+
+}
+.demo{
+    padding: 1rem;
+    background-color: chocolate;
+    width: 1000px;
+    border-bottom: 1px solid #ccc;
+}
+.das{
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+}
+

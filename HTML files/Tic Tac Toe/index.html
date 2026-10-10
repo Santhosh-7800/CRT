@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #64f4b8 0%, #3a86ff 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #game {
+            background: rgba(255,255,255,0.9);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            padding: 40px 30px 30px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            margin: 0 auto 20px auto;
+        }
+        .cell {
+            width: 90px;
+            height: 90px;
+            border: 2px solid #222;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #222;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background 0.2s, transform 0.2s, color 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .cell:hover {
+            background: #e0f7fa;
+            color: #3a86ff;
+            transform: scale(1.08);
+        }
+        h1 {
+            text-align: center;
+            color: #3a86ff;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            font-size: 2.2rem;
+        }
+        button {
+            background: #3a86ff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        button:hover {
+            background: #64f4b8;
+            color: #222;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <h1>Tic Tac Toe</h1>
+        <div id="board" style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 5px; width: 312px; margin: 0 auto;">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+    </div>
+    <script>
+        let currentPlayer = 'X';
+        let gameActive = true;
+        const cells = document.querySelectorAll('.cell');
+        const winCombos = [
+            [0,1,2], [3,4,5], [6,7,8], // rows
+            [0,3,6], [1,4,7], [2,5,8], // cols
+            [0,4,8], [2,4,6]           // diags
+        ];
+
+        function checkWin() {
+            for (let combo of winCombos) {
+                const [a, b, c] = combo;
+                if (
+                    cells[a].innerHTML &&
+                    cells[a].innerHTML === cells[b].innerHTML &&
+                    cells[a].innerHTML === cells[c].innerHTML
+                ) {
+                    return cells[a].innerHTML;
+                }
+            }
+            return null;
+        }
+
+        function checkDraw() {
+            return [...cells].every(cell => cell.innerHTML !== '');
+        }
+
+        function handleClick(e) {
+            if (!gameActive) return;
+            if (e.target.innerHTML !== '') return;
+            e.target.innerHTML = currentPlayer;
+            const winner = checkWin();
+            if (winner) {
+                setTimeout(() => { alert(winner + ' wins!'); }, 10);
+                gameActive = false;
+                return;
+            }
+            if (checkDraw()) {
+                setTimeout(() => { alert('Draw!'); }, 10);
+                gameActive = false;
+                return;
+            }
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        }
+
+        cells.forEach(cell => cell.addEventListener('click', handleClick));
+
+        // Optional: Add a reset button
+        const resetBtn = document.createElement('button');
+        resetBtn.textContent = 'Reset Game';
+        resetBtn.style.marginTop = '20px';
+        resetBtn.onclick = function() {
+            cells.forEach(cell => cell.innerHTML = '');
+            currentPlayer = 'X';
+            gameActive = true;
+        };
+        document.getElementById('game').appendChild(resetBtn);
+    </script>
+</body>
+</html>

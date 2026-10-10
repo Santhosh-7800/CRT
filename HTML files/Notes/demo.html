@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Notes App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Notes</h1>
+    <input type="text" id="search" placeholder="Search notes..." />
+    <button id="toggleTheme">Theme</button>
+  </header>
+
+  <main>
+    <div id="noteForm">
+      <input type="text" id="NoteTitle" placeholder="Title" />
+      <div contenteditable="true" id="noteBody" class="editor" placeholder="Write your note..."></div>
+      <input type="file" id="imageInput" accept="image/*" />
+      <button onclick="saveNote()">Save Note</button>
+    </div>
+
+    <div id="notesContainer"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz</title>
+  <style>
+    body{
+      background-color: rgb(138, 211, 227);
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz</h1>
+  <div class="question1">
+    <h2>1. What does HTML stand for?</h2>
+    <input type="radio" name="q1" value="0"> Hyperlinks and Text Markup Language <br>
+    <input type="radio" name="q1" value="1"> Hyper Text Markup Language <br> <!-- Correct -->
+    <input type="radio" name="q1" value="0"> Home Tool Markup Language <br>
+  </div>
+  
+
+  <div class="question2">
+    <h2>2. Who is making the web standards?</h2>
+    <input type="radio" name="q2" value="0"> Mozilla <br>
+    <input type="radio" name="q2" value="0"> Microsoft <br>
+    <input type="radio" name="q2" value="1"> The World Wide Web Consortium <br> <!-- Correct -->
+  </div>
+  <div class="question3">
+    <h2>3. What is the ul?</h2>
+    <input type="radio" name="q3" value="1"> Unorder List <br> <!-- Correct -->
+    <input type="radio" name="q3" value="0"> Order List <br> 
+    <input type="radio" name="q3" value="0"> Both a & b <br>
+  </div>
+  <div class="question4">
+    <h2>4. What does JS stand for?</h2>
+    <input type="radio" name="q4" value="1"> JavaScript <br> <!-- Correct -->
+    <input type="radio" name="q4" value="0"> JavaSubject <br> 
+    <input type="radio" name="q4" value="0"> JavaScore <br>
+  </div>
+  <div class="question5">
+    <h2>5. What does RGB stand for?</h2>
+    <input type="radio" name="q5" value="0"> Red Green Black<br>
+    <input type="radio" name="q5" value="0"> Red Gry Blue <br>
+    <input type="radio" name="q5" value="1"> Red Green Blue <br>  <!-- Correct -->
+  </div>
+  <div class="question5">
+    <h2>6. Who is Priminister of India?</h2>
+    <input type="radio" name="q6" value="0"> KCR<br>
+    <input type="radio" name="q6" value="1"> Modi<br>  <!-- Correct -->
+    <input type="radio" name="q6" value="0"> Babu <br> 
+  </div>
+  <div class="question6">
+    <h2>7. What is the rgb value of red?</h2>
+    <input type="radio" name="q7" value="1"> #ff0000<br>  <!-- Correct -->
+    <input type="radio" name="q7" value="0"> #f000f0<br> 
+    <input type="radio" name="q7" value="0"> #00000f <br> 
+  </div>
+<div class="question9">
+    <h2>8. What is the rgb value of green?</h2>
+    <input type="radio" name="q8" value="0"> #00ff0 <br>
+    <input type="radio" name="q8" value="1"> #00ff00 <br> <!-- Correct -->
+    <input type="radio" name="q8" value="0"> #0000ff <br>
+  </div>
+  <div class="question10">
+    <h2>9. What is the rgb value of blue?</h2>
+    <input type="radio" name="q9" value="1"> #0000ff <br><!-- Correct -->
+    <input type="radio" name="q9" value="0"> #00ff00<br> 
+    <input type="radio" name="q9" value="0"> #000ff <br>
+  </div>
+  <div class="question11">
+    <h2>10. Who many types of text-decoration?</h2>
+    <input type="radio" name="q10" value="0"> Four types <br>
+    <input type="radio" name="q10" value="0"> Six types<br> 
+    <inp
+    ut type="radio" name="q10" value="1"> Three types <br> <!-- Correct -->
+  </div>
+  <br>
+  <div>
+    <button onclick="calculateScore()">Submit</button>
+  </div>
+
+  <div id="result" class="score"></div>
+
+  <script>
+    function calculateScore() {
+      let score = 0;
+
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      const q3 = document.querySelector('input[name="q3"]:checked');
+      const q4 = document.querySelector('input[name="q4"]:checked');
+      const q5 = document.querySelector('input[name="q5"]:checked');
+      const q6 = document.querySelector('input[name="q6"]:checked');
+      const q7 = document.querySelector('input[name="q7"]:checked');
+      const q8 = document.querySelector('input[name="q8"]:checked');
+      const q9 = document.querySelector('input[name="q9"]:checked');
+      const q10 = document.querySelector('input[name="q10"]:checked');
+
+      if (q1) score += parseInt(q1.value);
+      if (q2) score += parseInt(q2.value);
+      if (q3) score += parseInt(q3.value);
+      if (q4) score += parseInt(q4.value);
+      if (q5) score += parseInt(q5.value);
+      if (q6) score += parseInt(q6.value);
+      if (q7) score += parseInt(q7.value);
+      if (q8) score += parseInt(q8.value);
+      if (q9) score += parseInt(q9.value);
+      if (q10) score += parseInt(q10.value);
+
+      document.getElementById("result").innerText = `Your Score: ${score}/10`;
+    }
+  </script>
+</body>
+</html>

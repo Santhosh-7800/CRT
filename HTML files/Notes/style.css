@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+  background: white;
+  color: black;
+}
+h1{
+    background-color: #007cc3;
+    padding: 10px;
+    color: rgb(209, 182, 47);
+    text-align: center;
+}
+body.dark {
+  background: #121212;
+  color: white;
+}
+header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.editor {
+  border: 1px solid #ccc;
+  min-height: 100px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.note {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+}
+.note img {
+  max-width: 100px;
+  display: block;
+  margin-top: 10px;
+}
+button {
+  margin: 5px;
+}

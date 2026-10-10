@@ -1,0 +1,46 @@
+.demo1{
+    border: 2px solid rgb(236, 236, 236);
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    padding: 20px;
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%,#285AEB 90%);
+}
+.demo2{
+    border: 2mm solid rgb(255, 255, 255);
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    padding: 1px;
+    margin-left: -5%;
+    margin-top: -6px;
+    
+}
+.demo3{
+    border: 1mm solid rgb(235, 235, 235);
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    padding:0%;
+    margin-right: 20px;
+    margin-left: 70%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+}
+.demo4{
+    border: 2mm solid rgb(231, 231, 231);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-left: 25%;
+    margin-right: 40%;
+    margin-top: -18%;
+    margin-bottom: 200%;
+
+}
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20% 25% 35% 40%;
+}
