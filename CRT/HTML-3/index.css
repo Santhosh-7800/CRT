@@ -1,0 +1,14 @@
+p{
+    color: aliceblue;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 0.2;
+    line-height: 1;
+}
+body{
+    background-image: url(https://th.bing.com/th/id/OIP.XL0eSVAxrSPo-QPmrJDy1QHaEK?r=0&rs=1&pid=ImgDetMain);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}

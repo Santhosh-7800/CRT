@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="division-block">
+        <h1>Welcome to the webpage</h1>
+        <p>this is a paragraph</p>
+    </div>
+    <button onclick="effect()">click</button>
+    <script>
+        function diss(){
+            let div = document.querySelector('.division-block');
+            if (div.style.display=='none'){
+                div.style.display="block";
+            }
+            else{
+                div.style.display='none'
+            }
+        }
+        function effect(){
+            let p=document.querySelector('p');
+            p.style.backgroundColor='purple';
+        
+        }
+    </script>
+</body>
+</html>

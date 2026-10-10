@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="greeting">Hi there! Hi! Good morning!</p>
+    <h1 id="mainHeading" class="he">This is the heading tag</h1>
+    
+    <p class="he" id="darkText">malla reddy</p>
+    <input type="text" id="nameInput"
+    placeholder="Enter your name">
+    <div style="display: flex; flex-direction: column; width: max-content; gap: 8px; margin-top: 10px;">
+        <button onclick="f()">Greet</button>
+        <button onclick="changeHeadings()">Change Headings</button>
+        <button onclick="addNewHeading()">Add New Heading</button>
+    </div>
+    <script>
+        function f() {
+            document.title = "Hello, World";
+            const name = document.getElementById("nameInput").value;
+            document.getElementById("greeting").innerText = `Hi! Good morning! HELLO, ${name}!`;
+        }
+
+        function changeHeadings() {
+            const name = document.getElementById("nameInput").value.trim().toLowerCase();
+            let displayName = "Main Heading Changed!";
+            if (name === "veteesh") displayName = "veteesh=kath";
+            else if (name === "bhanu") displayName = "bhanu= Bhanu khan ";
+            else if (name === "santhosh") displayName = "santhosh=sweetie~T";
+            else if (name === "nandhu") displayName = "nandhu=nandini";
+            else if (name === "ajay") displayName = "ajay=varsham";
+            else if (name) displayName = name;
+            document.getElementById("mainHeading").innerText = displayName;
+            // Sub heading removed
+        }
+        function addNewHeading() {
+            // Remove any previously added heading with id 'newHelloHeading'
+            const existing = document.getElementById("newHelloHeading");
+            if (existing) {
+                existing.remove();
+            }
+            const newHeading = document.createElement("h2");
+            newHeading.id = "newHelloHeading";
+            newHeading.innerText = "hello";
+            document.body.appendChild(newHeading);
+        }
+    </script>
+</body>
+</html>

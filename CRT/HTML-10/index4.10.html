@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cont"></div>
+    <p id="output"></p>
+  <script> 
+    document.body.addEventListener("keydown", function(event) {
+      document.body.style.backgroundColor = "orange";
+      if (event.key === "Enter") {
+        alert("Enter click");
+      } else {
+        document.getElementById("cont").innerHTML += event.code + "<br>";
+      }
+    });
+    document.body.addEventListener("keyup", function(event) {
+      document.body.style.backgroundColor = "yellow";
+    });
+  </script>
+</body>
+</html>

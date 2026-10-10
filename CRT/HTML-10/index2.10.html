@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 100%;
+            height: 400px;
+            position: relative;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" tabindex="0">
+        <input type="text">
+    </div>
+    <p id="output"></p>
+    <script>
+        const x=document.getElementById("container");
+        x.addEventListener("keydown", function(event){
+           x.style.backgroundColor="red";
+        });
+        x.addEventListener("keyup", function(event){
+            x.style.backgroundColor="green";
+        });
+        document.body.addEventListener("keypress",function(event){
+            alert(event.key);
+        })
+    </script>
+</body>
+</html>

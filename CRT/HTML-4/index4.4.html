@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: moveAndColor;
+            animation-duration: 1.8s;
+            animation-iteration-count: infinite;
+        }
+        .A{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(106, 23, 161);
+            position: initial;
+            animation-name: moveAndColor;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+        }
+        .B{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(106, 23, 161);
+            position: initial;
+            animation-name: moveAndColor;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes moveAndColor{
+            0%{
+                left: 0px;
+                background-color: red;
+                opacity: 1;
+                
+            }
+            50%{
+                left: 50px;
+                background-color: blue;
+                opacity: 0.5;
+                transform: translateX(200px);
+            }
+            100%{
+                left: 100px;
+                background-color: green;
+                opacity: 1;
+                transform: translateX(300px);
+                transform: translateY(300px);
+               
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div><br>
+    <div class="A"></div><br>
+    <div class="B"></div>
+</body>
+</html>

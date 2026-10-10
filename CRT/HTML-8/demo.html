@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <br>
+    <p>This is a simple HTML document.</p>
+    <button onclick="f()" id="class">Click Me</button>
+    <br>
+    <button onclick="f2()">bc</button>
+    <script>
+        function f(){
+            document.body.style.backgroundColor = "blue";
+            document.getElementsByTagName("h1")[0].style.fontSize = "50px";
+            document.getElementsByTagName("h1")[0].style.backgroundColor = "yellow";
+            document.getElementById("class").style.backgroundColor = "red";
+        }
+            function f1(){
+                let clr=document.body.style.backgroundColor;
+                if(clr=="red"){
+                    document.body.style.backgroundColor="yellow"
+                }
+                else if(clr=="yellow"){
+                    document.body.style.backgroundColor="pink"
+                }
+                else{
+                    document.body.style.backgroundColor="red"
+                }
+            }
+            function f2(){
+                let a=document.body.style.backgroundColor;
+                setInterval(() =>{
+                    document.body.style.backgroundColor=document.body.style.backgroundColor==='red' ? 'blue' : 'red';
+                },100)
+            }
+            
+            function g(){
+                let a=["red"]
+            }
+    </script>
+</body>
+</html>
+
+
+

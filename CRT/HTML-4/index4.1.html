@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display:flex;
+            color: white;
+            gap: 20px;
+            flex-flow: row;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .flex1{
+            display: flex;
+            border: solid;
+            border-radius: 5px;
+            height: 55px;
+            width: 55px;
+            background-color: rgb(159, 41, 35);
+            align-items: center;
+            text-align: center;
+            justify-content: space-around;
+            flex-direction: column;
+            box-shadow: 5px 5px 3px 2px ;
+        }
+        .calculator{
+            background-color: rgba(14, 186, 106, 0.573);
+            width: 150;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .flex1:hover{
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+
+        }
+        .display{
+            background-color: rgb(248, 248, 248);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+    <div class="display">
+        Enter <input placeholder="Enter the Text"></div>
+    <div class="flex">
+      <div class="flex1">1</div>
+      <div class="flex1">2</div>
+      <div class="flex1">3</div>
+      <div class="flex1">+</div>
+      </div>
+      <div class="flex">
+      <div class="flex1">4</div>
+      <div class="flex1">5</div>
+      <div class="flex1">6</div>
+      <div class="flex1">-</div>
+      </div>
+      <div class="flex">
+      <div class="flex1">7</div>
+      <div class="flex1">8</div>
+      <div class="flex1">9</div>
+      <div class="flex1">*</div>
+      </div>
+      <div class="flex">
+      <div class="flex1">0</div>
+      <div class="flex1">AC</div>
+      <div class="flex1">=</div>
+      <div class="flex1">/</div>
+      </div>
+    </div>
+  </div>
+</body>
+</body>
+</html>

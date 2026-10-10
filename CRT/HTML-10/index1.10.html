@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: rgb(16, 215, 208);
+            height: 300px;
+            width: 300px;
+        }
+        #output{
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <p id="output"></p>
+    <script>
+        document.body.addEventListener("container").addEventListener("mousemove",function(event){
+            const x = event.clientX;
+            const y = event.clientY;
+            const output = document.getElementById("output");
+            output.textContent = `X: ${x}, Y: ${y}`;
+        })
+   </script>
+   <script>
+        window.addEventListener("mousemove",function(event){
+            const x = event.clientX;
+            const y = event.clientY;
+            const output = document.getElementById("output");
+            output.innerText= `X: ${x}, Y: ${y}`;
+            output.style.left = (x + 10)+'px';
+            output.style.top =(y + 10)+'px';
+        })
+    </script>
+</body>
+</html>

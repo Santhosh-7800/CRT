@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    Name :
+    <input type="text" id="name" placeholder="Enter your name" required><br><br>
+    Age  .:
+    <input type="number" id="age" placeholder="Enter your age" required><br><br>
+    Email :
+    <input type="text" id="email" placeholder="Enter your email" required><br><br>
+    <button id="submit" onclick="submit()">Sumbit</button>
+    <div id="output"></div>
+    <script>
+        document.getElementById('submit').addEventListener('click', function(){
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const email = document.getElementById('email').value;
+            document.getElementById('output').innerHTML=`
+            <p>Name: ${name}</p>
+            <p>Age: ${age}</p>
+            <p>Email: ${email}</p>
+            `;
+        })
+    </script>
+</body>
+</html>

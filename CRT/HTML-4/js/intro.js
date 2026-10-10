@@ -1,0 +1,11 @@
+console.log("Welcome to the node.js");
+var d=10;
+console.log(d);
+var d=20;
+console.log(d);
+var d=30;
+console.log(d);
+let a=30;
+console.log(a);
+const b=50;
+console.log(b);

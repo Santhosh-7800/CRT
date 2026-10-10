@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main1{
+            display: flex;
+
+
+        }
+        .main{
+            display: flex;
+            gap: 10px;
+        }
+        .container{
+            background-color: lightgreen;
+            width: 200px;      
+          }
+        .container1{
+            background-color: chocolate;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+     <div id="div">
+    </div><br>
+    <input type="text" id="input" placeholder="Type something here...">
+    <input type="reset" id="reset" value="Reset">
+    <input type="submit" id="submit" value="Submit"><br>
+    <div class="main">
+        <div class="container">
+        <h1>heading #90</h1>
+        <p>paragraph</p>
+    </div>
+    <div class="container1">
+        <h1>heading 1(#VD)</h1>
+        <p>paragraph 1</p>
+    </div>
+    </div>
+    
+    <button onclick="g()">click me</button><br>
+    <a href="https://www.google.com">Link</a>
+    <br><br>
+    <button  onclick="f()">Click</button>
+    <script>
+        function f(){
+            let a=document.getElementsByTagName('a');
+            a[0].setAttribute('href','https://www.x.com');
+        }
+        function g(){
+            const cls=document.querySelectorAll('.main')
+            const c=document.querySelectorAll('.container1');
+            c.forEach(Element => {
+                Element.setAttribute('class',"container");
+            })
+            cls.forEach(x=>{
+                x.setAttribute('class',"main1");
+            })
+        }
+        let a=document.getElementById("div");
+        a.addEventListener("click", function() {
+            a.innerText=("Hi #90");
+        });
+         let b=document.getElementById("input");
+        let c=document.getElementById("reset");
+        let d=document.getElementById("submit");
+        c.addEventListener("click",function(){
+            b.value="";
+        })
+        d.addEventListener("click",function(event){
+            alert(`The content is : ${b.value}`)
+        })
+        let v=document.getElementById("div");
+        a.addEventListener("mouseover", function() {
+            a.innerHTML="<h1>Mouse over the the div!</h1>";
+            a.style.backgroundColor="lightblue";
+            
+        });
+        a.addEventListener("mouseout", function(){
+            a.innerHTML="<h1>Mouse out of the div!</h1>";
+            a.style.backgroundColor="red";
+        })
+        a.addEventListener("click" , function(){
+            a.innerText="Hi Vetesh";
+            a.style.backgroundColor="rgb(255, 200, 127)";
+        })
+         a.addEventListener("dblclick" , function(){
+            a.innerText="Hi Ajay";
+            a.style.backgroundColor="chartreuse";
+        })
+        a.addEventListener("mousedown", function() {
+            a.innerHTML="<h1>Santhosh!</h1>";
+            a.style.backgroundColor="blue";
+            
+        })
+    </script>
+</body>
+</html>
